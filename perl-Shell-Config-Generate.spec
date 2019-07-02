@@ -42,6 +42,6 @@ create shell configurations which do modify the environment.
 %make_install
 
 %files
-%doc Changes INSTALL LICENSE META.json META.yml MYMETA.yml README example
+%doc Changes INSTALL LICENSE META.json META.yml README example
 %{_mandir}/man3/*
 %{perl_vendorlib}/*
