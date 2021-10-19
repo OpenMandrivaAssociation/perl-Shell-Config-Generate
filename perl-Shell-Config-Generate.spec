@@ -34,7 +34,7 @@ create shell configurations which do modify the environment.
 %autosetup -n %{upstream_name}-%{upstream_version}
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor
+perl Makefile.PL INSTALLDIRS=vendor
 
 %make_build
 
@@ -43,5 +43,5 @@ create shell configurations which do modify the environment.
 
 %files
 %doc Changes INSTALL LICENSE META.json META.yml README example
-%{_mandir}/man3/*
+%doc %{_mandir}/man3/*
 %{perl_vendorlib}/*
