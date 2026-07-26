@@ -1,17 +1,15 @@
 %define upstream_name Shell-Config-Generate
-%define upstream_version 0.33
-
 %{?perl_default_filter}
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    2
+Version:    0.33
+Release:    3
 
 Summary:    Portably generate config for any shell
 License:    GPL+ or Artistic
 Group:      Development/Perl
-Url:        https://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Shell/%{upstream_name}-%{upstream_version}.tar.gz
+Url:        https://metacpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Shell/%{upstream_name}-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires: perl(ExtUtils::MakeMaker)
@@ -32,7 +30,7 @@ It does not modify the current environment, but it can be used to
 create shell configurations which do modify the environment.
 
 %prep
-%autosetup -n %{upstream_name}-%{upstream_version}
+%autosetup -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
