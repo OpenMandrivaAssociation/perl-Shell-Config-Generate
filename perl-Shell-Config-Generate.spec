@@ -2,8 +2,8 @@
 %{?perl_default_filter}
 
 Name:       perl-%{upstream_name}
-Version:    0.33
-Release:    3
+Version:    0.34
+Release:    1
 
 Summary:    Portably generate config for any shell
 License:    GPL+ or Artistic
@@ -30,7 +30,7 @@ It does not modify the current environment, but it can be used to
 create shell configurations which do modify the environment.
 
 %prep
-%autosetup -n %{upstream_name}-%{version}
+%autosetup -n Shell-Config-Generate-0.34
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
